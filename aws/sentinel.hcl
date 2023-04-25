@@ -12,3 +12,7 @@ module "tfplan-functions" {
 policy "less-than-200-percent-month" {
   enforcement_level = "hard-mandatory"
 }
+
+policy "less-than-50-percent-month" {
+  enforcement_level = "advisory"
+}
