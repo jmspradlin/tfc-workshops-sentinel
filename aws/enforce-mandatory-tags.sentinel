@@ -108,7 +108,7 @@ mandatory_tags = [
   "department",
   "environment",
   "billable",
-  "costCenter"
+  "costCenter",
 ]
 
 ### Rules ###
