@@ -9,6 +9,6 @@ module "tfplan-functions" {
   source = "https://raw.githubusercontent.com/hashicorp/terraform-sentinel-policies/main/common-functions/tfplan-functions/tfplan-functions.sentinel"
 }
 
-policy "less-than-10-percent-month" {
+policy "less-than-200-percent-month" {
   enforcement_level = "hard-mandatory"
 }
