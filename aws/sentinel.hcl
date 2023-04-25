@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MPL-2.0
 
 policy "enforce-mandatory-tags" {
-    enforcement_level = "soft-mandatory"
+    enforcement_level = "advisory"
 }
 
 module "tfplan-functions" {
