@@ -1,6 +1,10 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
+policy "desired-instance-type" {
+  enforcement_level = "soft-mandatory"
+}
+
 policy "enforce-mandatory-tags" {
     enforcement_level = "advisory"
 }
