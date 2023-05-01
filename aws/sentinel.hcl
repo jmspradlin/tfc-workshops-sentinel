@@ -18,5 +18,5 @@ policy "less-than-200-percent-month" {
 }
 
 policy "less-than-50-percent-month" {
-  enforcement_level = "advisory"
+  enforcement_level = "soft-mandatory"
 }
