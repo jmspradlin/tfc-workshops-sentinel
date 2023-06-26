@@ -1,0 +1,24 @@
+# This policy uses the Sentinel tfplan import to require that all Azure storage
+# uses Locally-Redundant replication tier.
+
+# Import common-functions/tfplan-functions/tfplan-functions.sentinel
+# with alias "plan"
+import "tfplan-functions" as plan
+
+### List of mandatory tags ###
+storage_replication = [
+  "LRS",
+]
+
+# Get all Azure storage
+allStorageAccounts = plan.find_resources("azurerm_storage_account")
+
+# Filter to Azure storage with violations
+# Warnings will be printed for all violations since the last parameter is true
+violatingAzureStorage = plan.filter_attribute_not_contains_list(allStorageAccounts,
+                        "account_replication_type", storage_replication, true)
+
+#Main rule
+main = rule {
+  length(violatingAzureStorage["messages"]) is 0
+}
