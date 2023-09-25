@@ -6,9 +6,7 @@
 import "tfplan-functions" as plan
 
 ### List of mandatory tags ###
-storage_replication = [
-  "LRS",
-]
+storage_replication = "LRS"
 
 # Get all Azure storage
 allStorageAccounts = plan.find_resources("azurerm_storage_account")
