@@ -13,7 +13,7 @@ allStorageAccounts = plan.find_resources("azurerm_storage_account")
 
 # Filter to Azure storage with violations
 # Warnings will be printed for all violations since the last parameter is true
-violatingAzureStorage = plan.filter_attribute_is_value(allStorageAccounts,
+violatingAzureStorage = plan.filter_attribute_is_not_value(allStorageAccounts,
                         "account_replication_type", "storage_replication", true)
 
 #Main rule
