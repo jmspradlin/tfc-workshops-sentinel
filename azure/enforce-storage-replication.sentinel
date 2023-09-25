@@ -1,5 +1,5 @@
 # This policy uses the Sentinel tfplan import to require that all Azure storage
-# uses Locally-Redundant replication tier.
+# uses Locally-Redundant (LRS) replication tier.
 
 # Import common-functions/tfplan-functions/tfplan-functions.sentinel
 # with alias "plan"
